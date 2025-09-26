@@ -1,41 +1,39 @@
-let moonSymbol = 1
-let moonSymbolReversed = 5
-let femaleSymbol = 10
-let strangeSymbol = 50 
+const moonSymbol = 1;         
+const moonSymbolReversed = 5; 
+const femaleSymbol = 10;      
+const strangeSymbol = 50; 
+const any = 100
 
-let caldero1 = prompt("Ingrese uno o varios simbolos ♁/☾/☽/⚕/Nan")
+const caldero1 = prompt("Caldero 1: Ingrese uno o varios simbolos ♁/☾/☽/⚕");
+const caldero2 = prompt("Caldero 2: Ingrese uno o varios simbolos ♁/☾/☽/⚕");
+const caldero3 = prompt("Caldero 3: Ingrese uno o varios simbolos ♁/☾/☽/⚕");
+const caldero4 = prompt("Caldero 4: Ingrese uno o varios simbolos ♁/☾/☽/⚕");
+const caldero5 = prompt("Caldero 5: Ingrese uno o varios simbolos ♁/☾/☽/⚕");
 
-let caldero2 = prompt("Ingrese uno o varios simbolos ♁/☾/☽/⚕/Nan")
+let result = 0;
 
-let caldero3 = prompt("Ingrese uno o varios simbolos ♁/☾/☽/⚕/Nan")
+const allsymbols = [caldero1, caldero2, caldero3, caldero4, caldero5];
 
-let caldero4 = prompt("Ingrese uno o varios simbolos ♁/☾/☽/⚕/Nan")
+for (const caldero of allsymbols) {
 
-let caldero5 = prompt("Ingrese uno o varios simbolos ♁/☾/☽/⚕/Nan")
-
-let result = []
-
-if ("☽" in caldero1, caldero2, caldero3, caldero4, caldero5) {
-    1 += result
+    if (caldero) {
+        if (caldero.includes("☽")) {
+            result += moonSymbol; 
+        }
+        if (caldero.includes("☾")) {
+            result += moonSymbolReversed;
+        }
+        if (caldero.includes("♁")) {
+            result += femaleSymbol;
+        }
+        if (caldero.includes("⚕")) {
+            result += strangeSymbol;
+        }
+        if (caldero.isNaN) {
+            result += any;
+        }
+    }
 }
 
-if ("☾" in caldero1, caldero2, caldero3, caldero4, caldero5) {
-    5 += result
-}
-
-if ("♁" in caldero1, caldero2, caldero3, caldero4, caldero5) {
-    10 += result
-}
-
-if ("⚕" in caldero1, caldero2, caldero3, caldero4, caldero5) {
-    50 += result
-}
-
-function suma(moonSymbol, moonSymbolReversed, femaleSymbol, strangeSymbol) {
-    return  + b;
-}
-
-
-alert (result)
-console.log (result)
-
+alert(`El total de los simbolos es: ${result}`);
+console.log(`El total de los simbolos es: ${result}`);
