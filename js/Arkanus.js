@@ -15,7 +15,7 @@ let result = 0;
 const allsymbols = [caldero1, caldero2, caldero3, caldero4, caldero5];
 
 for (const caldero of allsymbols) {
-
+    //includes cuenta como un in
     if (caldero) {
         if (caldero.includes("☽")) {
             result += moonSymbol; 
